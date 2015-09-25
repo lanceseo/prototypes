@@ -1,0 +1,31 @@
+/* index css */
+.aboutme_p {font-size: 12px;}
+.aboutme_h {color: orange;}
+#aboutme {text-align: center;}
+img {
+  height: 170px;
+  float: left;
+  border-radius: 50%;
+  position: relative;
+  top: -200px;
+}
+
+/* experience css */
+.experience_h {font-family: 'Montserrat';}
+#experience-list, #experience-list ul{
+  background-color: palegreen;
+  list-style-type: lower-greek;
+}
+
+/* skills css */
+.skills_h {font-family: 'Montserrat';}
+#skills-list ul {color: blue;}
+
+/* nav menu css */
+.nav, .nav ul li {
+  list-style-type: none;
+  display: inline;
+  text-align: center;
+  margin: 15px;
+  font-size: 18px;
+}
