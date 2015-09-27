@@ -1,0 +1,14 @@
+#header {
+  height: 15vh;
+  border: 1px solid red;
+  text-align: center;
+}
+#main_content {
+  height: auto;
+  border: 1px solid green;
+}
+
+#header li {
+  list-style-type: none;
+  display: inline-block;
+}

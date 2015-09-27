@@ -1,0 +1,17 @@
+#title {
+  height: 15vh;
+  border: 1px solid red;
+}
+#left_nav {
+  width: 15vw;
+  height: 85vh;
+  border: 1px solid green;
+  display: inline-block;
+}
+#main_content {
+  width: 82vw;
+  height: 85vh;
+  vertical-align: top;
+  border: 1px solid blue;
+  display: inline-block;
+}

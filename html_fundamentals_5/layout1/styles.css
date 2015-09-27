@@ -1,0 +1,21 @@
+#header {
+  height: 15vh;
+  border: 1px solid red;
+  text-align: center;
+}
+#main_content {
+  height: 70vh;
+  border: 1px solid green;
+}
+#footer {
+  height:15vh;
+  border: 1px solid blue;
+}
+
+#header li {
+  list-style-type: none;
+  display: inline-block;
+}
+#footer li {
+  list-style-type: none;
+}
