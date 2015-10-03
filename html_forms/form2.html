@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>html_forms2</title>
+  <style>
+    body {
+      width: 900px;
+      margin: auto;
+      background-color: #B13939;
+      font-family: arial, helvetica, sans-serif;
+      color: white;
+    }
+    h2:first-child {
+      text-align: center;
+    }
+    p {
+      font-size: 15px;
+      line-height: 1.5;
+    }
+    input {
+      height: 50px;
+      width: 45%;
+      margin: 20px 5px 10px 0;
+      font-size: 15px;
+      padding-left: 20px;
+      box-shadow: 0 5px 2px maroon;
+      border: none;
+    }
+    input[type="number"] {
+      width: 22%;
+    }
+    input[type="submit"] {
+      width: 22%;
+      background-color: #881717;
+      color: white;
+      margin-top: 40px;
+      margin-right: 40px;
+      float: right;
+    }
+  </style>
+</head>
+<body>
+
+  <form>
+    <h2>Instruction for Application - Academic Year 2014</h2>
+    <p>
+      1. The deadline for 2014-2015 scholarship application: March 30, 2014. Applications received after March 30 will
+      be considered on a funds available basis.<br>
+      2. Only completed applications will be considered. Do Not Leave items Blank.<br>
+      3. Attach a current copy of your high school and/or college transcript.<br>
+      4. Two signed letters of recommendation (form non-relatives) must be attached to this application.
+    </p>
+    <p>
+      Consideration for any scholarship award is based on a point system including GPA, participation in extra-curricular
+      activities, school organizations and community service. This will be a four semester scholarship and you must
+      maintain criteria set in the guidelines.
+    </p>
+    <h2>Application Data</h2>
+    <input type="text" placeholder="Last Name, First Name, MI">
+    <input type="number" placeholder="Social Security #"><br>
+    <input type="text" placeholder="City, State, Zip, County">
+    <input type="tel" placeholder="Permanent Home Phone"><br>
+    <input type="text" placeholder="Intended major at University">
+    <input type="text" placeholder="At which location will you be attending?"><br>
+    <input type="submit" value="NEXT >>">
+   </form>
+
+</body>
+</html>
