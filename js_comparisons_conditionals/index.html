@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS comparisons and conditionals</title>
+  <script>
+    // feature 1
+    var mySmallNumber = 5;
+    var myString = "5";
+    var myBigNumber = 255;
+
+    // feature 2
+    var output1 = mySmallNumber == myString;
+    var output2 = mySmallNumber === myString;
+    var output3 = mySmallNumber < myBigNumber;
+    var output4 = mySmallNumber > myBigNumber;
+
+    // feature 3
+    var myTruth = true;
+    var myLie = false;
+
+    // feature 4
+    if (myTruth == true) {
+      console.log("I\'m true!");
+    }
+
+    if (myLie == true) {
+      console.log("I\'m true!");
+    }
+    else {
+      console.log("I\'m false!");
+    }
+
+    if (myLie != true) {
+      console.log("I\'m a true lie!");
+    }
+
+    // feature 5
+    var myNumber = 98;
+
+    switch (myNumber) {
+      case 13:
+        console.log("Your number is 13");
+        break;
+      case 47:
+        console.log("Your number is 47");
+        break;
+      case 98:
+        console.log("Your number is 98");
+        break;
+      default:
+        console.log("Your number does not match any of my numbers!");
+    }
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>
