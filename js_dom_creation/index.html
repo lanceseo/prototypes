@@ -40,11 +40,44 @@
 <script>
 $(document).ready(function()
 {
+
 	//playground 1 code
+  	var play1_h1 = $("<h1>").text("I am a heading");
+  	var play1_p1 = $("<p>").text("This is an awesome paragraph");
+  	var play1_p2 = $("<p>").css("color", "red").text("This has red text");
+
+  	$("#playground1").append(play1_h1).append(play1_p1).append(play1_p2);
+
 
 	//playground 2 code
+  	var play2_div1 = $("<div>").addClass("awesome_class").text("Here is some awesome div text");
+  	var play2_div2 = $("<div>").addClass("awesome_class").attr("id", "my_awesome_div2").text("Here is MORE awesome div text");
+	var play2_div3 = $("<div>").addClass("awesome_class").attr("id", "my_awesome_div3").attr("data-coolness", "high").text("Here is ");
+  	var play2_strong = $("<strong>").text("EVEN MORE");
+
+  	$("#playground2").append(play2_div1).append(play2_div2).append(play2_div3);
+  	$(play2_strong).appendTo(play2_div3);
+  	$(play2_div3).append(" awesome div text");
+
 
 	//playground 3 code
+	var play3_ul = $("<ul>").addClass("neato");
+  	var play3_li1 = $("<li>").text("Link 1");
+	var play3_li2 = $("<li>").text("Link 2");
+	var play3_li3 = $("<li>").text("Link 3");
+  	var play3_figure = $("<figure>").addClass("awesome_picture");
+  	var play3_figcaption = $("<figcaption>").text("That's right, ");
+  	var play3_span = $("<span>").addClass("bold_text").text("you are");
+
+  	$("#playground3").append(play3_ul);
+  	$(play3_li1).appendTo(play3_ul);
+	$(play3_li2).appendTo(play3_ul);
+	$(play3_li3).appendTo(play3_ul);
+  	$("#playground3").append(play3_figure);
+  	$("<img>").attr("src", "http://comerecommended.com/wp-content/uploads/2013/01/how-to-get-awesome-back.jpg").appendTo(play3_figure);
+  	$(play3_figcaption).appendTo(play3_figure);
+  	$(play3_span).appendTo(play3_figcaption);
+
 });
 </script>
 </head>
