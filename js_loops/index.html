@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js_loops - Lance</title>
+</head>
+<script>
+    var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+    // log numbers in ascending order
+    for (var i = 0; i < numbers.length; i++) {
+        console.log("Ascending: ", numbers[i]);
+    }
+
+    // log numbers in descending order
+    for (i = numbers.length -1; i >= 0; i--) {
+        console.log("Descending: ", numbers[i]);
+    }
+
+    // log odd numbers from numbers array
+    for (i = 0; i < numbers.length; i += 2) {
+        console.log("Odds: ", numbers[i]);
+    }
+
+    // previous for-loop does not work with mixedArray, so fix it
+    var mixedArray = [4, 56, 11, 13, 97, 22, 7, 36, 19, 5, 8, 10];
+    for (i = 0; i < mixedArray.length; i++) {
+        if ((mixedArray[i] % 2) != 0) {
+            console.log("mixedArray Odds: ", mixedArray[i]);
+        }
+    }
+
+    // For in loop
+    var classRoom = {desk1: 'Stu', desk2: 'Peggy', desk3: 'LoneStar', desk4: 'George', desk5: 'Sheldon'};
+    for (i in classRoom) {
+        console.log(classRoom[i], " is at " + Object.keys(classRoom));
+    }
+
+</script>
+<body>
+
+</body>
+</html>
