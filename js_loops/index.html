@@ -22,7 +22,7 @@
         console.log("Odds: ", numbers[i]);
     }
 
-    // previous for-loop does not work with mixedArray, so fix it
+    // previous For-loop does not work with mixedArray, so fix it
     var mixedArray = [4, 56, 11, 13, 97, 22, 7, 36, 19, 5, 8, 10];
     for (i = 0; i < mixedArray.length; i++) {
         if ((mixedArray[i] % 2) != 0) {
@@ -33,8 +33,35 @@
     // For in loop
     var classRoom = {desk1: 'Stu', desk2: 'Peggy', desk3: 'LoneStar', desk4: 'George', desk5: 'Sheldon'};
     for (i in classRoom) {
-        console.log(classRoom[i], " is at " + Object.keys(classRoom));
+        console.log(classRoom[i], "is at " + i);
     }
+
+    // While loop
+    var studentArray = [{name: "Bob", grade: 87}, {name: "Fred", grade: 82}, {name: "George", grade: 93}, {name: "Robert", grade: 85}];
+    function findStudent(name) {
+        var output = "";
+        var i = 0;
+        var found = false;
+
+        while (!found && i < studentArray.length) {
+            var student = studentArray[i];
+            if (student.name == name) {
+                output = "Found " + name + " Grade: " + student.grade;
+                found = true;
+            }
+            i++;
+        }
+
+        if (!found) {
+            output = "Student " + name + " not found.";
+        }
+
+        return output;
+    }
+
+    console.log("Test 1:", findStudent("George"));
+    console.log("Test 2:", findStudent("Fred"));
+    console.log("Test 3:", findStudent("Hank"));
 
 </script>
 <body>
