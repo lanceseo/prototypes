@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>
+        $("document").ready(function() {
+            $("button").on("click", function() {
+                ajax_call();
+            })
+        });
+        function ajax_call() {
+            var howdy = $("input").val();
+            var textarea = $("textarea").val();
+            $.ajax({
+                dataType: 'text',
+                method: 'post',
+                url: 'index.php',
+                data: {
+                    'checkbox': howdy,
+                    'textarea': textarea
+                },
+                success: function (result) {
+                    console.log(result);
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+        <input type="checkbox" value="howdy">Howdy!<br>
+        <textarea></textarea><br>
+        <button>Call AJAX</button>
+</body>
+</html>
