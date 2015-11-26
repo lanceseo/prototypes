@@ -1,21 +1,11 @@
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-
+<body>
 <?php
 $pics = (glob('images/*.jpg'));
 print_r($pics);
 
-//print('<br><br>');
-//
-//for ($i=0; $i<count($pics); $i++){
-//    print("<div class='image_container'><img src='$pics[$i]'></div>");
-//}
-//print('<br><br>');
-//
-//foreach ($pics as $values) {
-//    print("<div class='image_container'><img src='$values'></div>");
-//}
 ?>
 <br><br>
 <div class="image_container">
@@ -27,24 +17,25 @@ print_r($pics);
 </div>
 <br><br>
 
-<!-- Carousel -->
-<div id="myCarousel" class="carousel" data-ride="carousel" style="display:inline-block">
+<div id="myCarousel" class="carousel slide" data-ride="carousel" style="display:inline-block">
+<?
+
+
+?>
+</div>
+
+
+<!--
+<div id="myCarousel" class="carousel slide" data-ride="carousel" style="display:inline-block">
     <!-- Wrapper for slides -->
     <div class="carousel-inner center" role="listbox">
-        <?
-        for ($i=0; $i<count($pics); $i++){
-            if ($i===0) {
-                print("<div class='item active'>");
-                print("<img src='$pics[$i]' width='500px'>");
-                print("</div>");
-            }
-            else {
-                print("<div class='item'>");
-                print("<img src='$pics[$i]' width='500px'>");
-                print("</div>");
-            }
-        }
-        ?>
+        <div class="item active">
+            <img src="images/beagle_.jpg" width="400px">
+        </div>
+
+        <div class="item">
+            <img src="images/nature1.jpg" width="400px">
+        </div>
     </div>
 
     <!-- Left and right controls -->
@@ -57,5 +48,7 @@ print_r($pics);
         <span class="sr-only">Next</span>
     </a>
 </div>
+-->
 
 
+</body>
