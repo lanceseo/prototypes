@@ -1,30 +1,35 @@
 <!-- Session Reader -->
 <?php
 session_start();
-$form_data = $_POST;
-$_SESSION['f_data'] = $form_data;
-//print_r($_SESSION['f_data']);
-$errArray = array();
+$_SESSION['f_data'] = $_POST;
+$_SESSION['error'] = [];
+// var_dump($_SESSION);
+$errFlag = false;
 
 if (!preg_match("/^[a-zA-Z ]*$/",$_SESSION['f_data']['name'])) {
     $nameErr = 'Only letters and white space allowed for NAME';
-    $errArray = ['name'=>$nameErr];
+    $_SESSION['error']['name'] = $nameErr;
+    $errFlag = true;
 }
-if (!is_int($_SESSION['f_data']['age'])) {
+
+if (!is_numeric($_SESSION['f_data']['age'])) {
     $ageErr = 'Only integers are allowed for AGE';
-    array_push($errArray, ['age'=>$ageErr]);
+    $_SESSION['error']['age'] = $ageErr;
+    $errFlag = true;
 }
+
 if (!preg_match("/^[a-zA-Z ]*$/",$_SESSION['f_data']['occupation'])) {
     $occuErr = 'Only letters and white space allowed for OCCUPATION';
-    array_push($errArray, ['occu'=>$occuErr]);
+    $_SESSION['error']['occu'] = $occuErr;
+    $errFlag = true;
 }
-$_SESSION['error'] = $errArray;
 
-header('location: session_setter.php');
-//var_dump($_SESSION);
-//print_r($_SESSION['error']);
-//print_r($_SESSION['error']['name']);
-//var_dump(isset($_SESSION['error']['name']));
+if ($errFlag) {
+    header('location: session_setter.php');
+}
+
+print_r($_SESSION);
+
 ?>
 <br><br>
 <a href="session_setter.php">Go to Setter</a><br>
