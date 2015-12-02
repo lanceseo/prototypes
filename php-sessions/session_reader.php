@@ -20,10 +20,11 @@ if (!preg_match("/^[a-zA-Z ]*$/",$_SESSION['f_data']['occupation'])) {
 }
 $_SESSION['error'] = $errArray;
 
+header('location: session_setter.php');
 //var_dump($_SESSION);
-print_r($_SESSION['error']);
-print_r($_SESSION['error']['name']);
-var_dump(isset($_SESSION['error']['name']));
+//print_r($_SESSION['error']);
+//print_r($_SESSION['error']['name']);
+//var_dump(isset($_SESSION['error']['name']));
 ?>
 <br><br>
 <a href="session_setter.php">Go to Setter</a><br>
