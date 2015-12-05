@@ -1,0 +1,2 @@
+# ignore mysql connection file
+mysql_connect.php
