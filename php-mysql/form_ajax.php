@@ -12,7 +12,6 @@
         var tDetails = $('input[name="details"]').val();
         var tTimestamp = $('input[name="timestamp"]').val();
         var tLocation = $('input[name="location"]').val();
-        //console.log(tTitle);
 
         $.ajax({
             dataType: 'json',
@@ -30,7 +29,6 @@
 
         })
     }
-
 
 </script>
 </head>

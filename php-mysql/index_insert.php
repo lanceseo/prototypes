@@ -14,7 +14,6 @@ mysqli_query($conn, $query);
 if (mysqli_affected_rows($conn)>0) {
     $new_id = mysqli_insert_id($conn);
     print_r("New ID: ".$new_id);
-    $success = $new_id;
 }
 
 ?>
