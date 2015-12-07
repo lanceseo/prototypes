@@ -2,7 +2,7 @@
 <?php
 require('mysql_connect.php');
 
-print_r($_POST);
+//print_r(json_encode($_POST));
 $todoTitle = $_POST['title'];
 $todoDetails = $_POST['details'];
 $todoTimestamp = $_POST['timestamp'];
@@ -13,7 +13,13 @@ mysqli_query($conn, $query);
 
 if (mysqli_affected_rows($conn)>0) {
     $new_id = mysqli_insert_id($conn);
-    print_r("New ID: ".$new_id);
+    $result = [
+      'success'=>true, 'new_id'=>$new_id
+    ];
+    print_r(json_encode($result));
+}
+else {
+    print_r('No Good');
 }
 
 ?>

@@ -14,7 +14,7 @@
         var tLocation = $('input[name="location"]').val();
 
         $.ajax({
-            dataType: 'json',
+            //dataType: 'json',
             method: 'post',
             url: 'index_insert.php',
             data: {
@@ -24,9 +24,16 @@
                 'location' : tLocation
             },
             success: function(result) {
-                console.log('this worked');
+                if (result.success) {
+                    console.log(result);
+                }
+                else {
+                    console.log('json issue');
+                }
+            },
+            error: function(msg) {
+                console.log('something wrong '+ msg);
             }
-
         })
     }
 
